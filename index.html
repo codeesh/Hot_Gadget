@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -30,10 +34,9 @@
 
             <!-- Banner -->
             <div class="banner-container">
-                <h1>Apple Iphone Store</h1>
-                <p>Explore and buy the latest Apple iPhone models and accessories conveniently from the <br> <span
-                        class="hot-gadgets">Hot Gadgets</span>
-                <div class="br"></div> Discover innovation today!</p>
+                <h1><i class="fa-solid fa-fire-flame-curved" style="color: #ed3f2c;"></i><br>Hot Hot Gadgets Store</h1>
+                <p>Explore and buy the latest Cool Gadgets and accessories conveniently from the</p> <span class="hot-gadgets">Hot Gadgets.</span>
+                <p>Discover innovation today!</p>
                 <div>
                     <img src="./images/iPhone_banner.png" alt="">
                 </div>
@@ -44,20 +47,41 @@
         <section class="search-section">
             <div>
                 <h3>Search your phone</h3>
+                <span class="hot-gadgets">Iphone, Samsung, Oppo</span>
             </div>
             <div class="search-input-and-button">
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass search-icon" style="color: #62676f;"></i>
-                    <input type="text" placeholder="Search your phone" class="search-input">
+                    <input id="search-text" type="text" placeholder="Search your phone" class="search-input">
                 </div>
-                <div>
-                    <button class="button">Search</button>
+                <div class="search-spinner">
+                    <button class="button" onclick="searchButton()">Search</button>
+                    <div id="spinner" class="spinner-border text-primary collapse" role="status"></div>
                 </div>
             </div>
         </section>
 
         <!-- Card Section -->
-        <section class="card-section" id="card-section-id">  </section>
+        <section class="card-section" id="card-section-id">
+        </section>
+
+        <div class="show-more">
+            <button onclick="showAll()" class="button show-more-button" id="show-button">Show More</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="phone-name" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="phone-name"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-Image">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="footer">
@@ -106,11 +130,12 @@
                     <li>Careers</li>
                 </ul>
             </div>
-            
+
         </footer>
     </main>
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
