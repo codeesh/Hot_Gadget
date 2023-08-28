@@ -105,7 +105,7 @@ body {
 .card-container {
     border-radius: 8px;
     border: 1px solid var(--dark-05, #CFCFCF);
-    width: 15vw;
+    width: 20vw;
     height: 500px;
     padding-bottom: 10px;
     display: flex;
