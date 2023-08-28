@@ -134,16 +134,16 @@ body {
 .card-div {
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 60px;
 }
 
 .show-details-button {
     width: 50%;
     background-color: #0D6EFD;
     color: #FFF;
-    font-size: 20px;
+    font-size: 10px;
     font-weight: 600;
-    padding: 5px 5px;
+    padding: 10px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
